@@ -1,19 +1,17 @@
-import { createStore } from "redux";
-
-const initialState = {
+export const initialState = {
   filters: {
     priority: "",
-    status: ""
+    status: "",
   },
-  jobs: {}
+  jobs: {},
 };
 
-const reducer = (state = initialState, action) => {
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "LOAD_DATA_SUCCESS": {
       return {
         ...state,
-        jobs: action.jobs
+        jobs: action.jobs,
       };
     }
     case "SET_PRIORITY_FILTER":
@@ -21,5 +19,3 @@ const reducer = (state = initialState, action) => {
       return state;
   }
 };
-
-export default createStore(reducer, initialState);
