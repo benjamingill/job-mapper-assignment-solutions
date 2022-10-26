@@ -5,7 +5,7 @@ import data from "./data.json";
 import "./index.css";
 
 // fake the fetch to the backend server and return data
-global.fetch = (_url): Promise<Response> =>
+globalThis.fetch = (_url): Promise<Response> =>
   new Promise((resolve) =>
     new Promise((resolve) => setTimeout(resolve, 50)).then(() =>
       resolve({

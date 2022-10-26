@@ -7,7 +7,7 @@ const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    // fetch data using mock asyncronous fetch above
+    // fetch data
   });
 
   return (
