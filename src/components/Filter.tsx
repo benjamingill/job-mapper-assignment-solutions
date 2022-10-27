@@ -11,20 +11,20 @@ const FilterContainer = styled.div`
   justify-content: space-between;
 `;
 
-const Filter = ({ name }) => (
+const Filter = ({ name, value, onChange }) => (
   <FilterContainer>
     <label htmlFor={name}>{name}</label>
     <select
       style={{ width: "100%", marginLeft: 12 }}
       name={name}
       id={name}
-      onChange={() => {}}
-      value={"All"}
+      onChange={(e) => onChange(e.target.value)}
+      value={value}
     >
       <option value="all">All</option>
-      <option value="filterValue1">Value1</option>
-      <option value="filterValue2">Value2</option>
-      <option value="filterValue3">Value3</option>
+      <option value="high">High</option>
+      <option value="medium">Medium</option>
+      <option value="low">Low</option>
     </select>
   </FilterContainer>
 );
